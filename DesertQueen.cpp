@@ -23,7 +23,7 @@ int fMW(int n, const vector<vector<char>>& grid, pair<int, int> start, pair<int,
             int ny = y + dir[d][1];
 
             if (isValid(nx, ny, n, grid)) {
-                int cost = (grid[x][y] == 'T' && grid[nx][ny] == 'T') ? 0 : 1; 
+                int cost = (grid[x][y] == 'T' && grid[nx][ny] == 'T') ? -1 : 1; 
                 if (placementlelo[x][y] + cost < placementlelo[nx][ny]) {
                     placementlelo[nx][ny] = placementlelo[x][y] + cost;
                     q.push({nx, ny});
