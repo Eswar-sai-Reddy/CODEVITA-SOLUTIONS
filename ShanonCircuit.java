@@ -61,8 +61,8 @@ public class ShannonCircuits {
         switch (op) {
             case "AND": return x & y;
             case "OR": return x | y;
-            case "NAND": return ~(x & y) & 1;
-            case "NOR": return ~(x | y) & 1;
+            case "NAND": return ~(x & y) | 1;
+            case "NOR": return ~(x | y) | 1;
             case "XOR": return x ^ y;
             default: return 0;
         }
